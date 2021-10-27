@@ -20,6 +20,9 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.34",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.13",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.1.0"
   }
 }
