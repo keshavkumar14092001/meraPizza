@@ -1,0 +1,139 @@
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+}
+
+body li {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+  color: #232323;
+}
+
+.navbar-dark .navbar-brand {
+  color: #f4f4f4;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.navbar-dark .navbar-brand:hover {
+  color: #f4f4f4;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #f4f4f4;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fe5f1e;
+  transition: all 0.3s ease-in;
+}
+
+.coder {
+  color: #1c3fa8;
+}
+
+.cartImg {
+  border-radius: 26px;
+}
+
+.fas {
+  color: #fff !important;
+  transition: all 0.3s ease-in;
+}
+
+.fas:hover {
+  color: #fe5f1e !important;
+  transition: all 0.3s ease-in;
+}
+
+.displayImg {
+  width: 500px;
+  height: 450px;
+}
+
+.displayContainer {
+  background: #ccc;
+  padding: 85px 0px;
+  width: 1297px;
+}
+
+.orderButton {
+  background: #fe5f1e;
+  border: 2px solid black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0px;
+  border-radius: 20px;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.orderButton:hover {
+  transition: all 0.3s ease-in;
+  border: 2px solid black;
+  background: #b23301;
+  transform: scale(0.9);
+}
+
+.menuContainer {
+  background-color: #ccc;
+  padding: 15px 0px;
+  width: 1297px;
+}
+
+.menuPizzaImgContainer {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.menuPizzaImg {
+  padding: 10px 5px;
+}
+
+.munuPizzaInfo {
+  width: 70%;
+}
+
+.pizzaSize {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ccc;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.pizzaPrice {
+  font-size: 18px;
+  font-weight: bolder;
+  background: #f4f4f4;
+  padding: 1px 5px;
+}
+
+.pizzaButton {
+  border: none;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background: #fe5f1e;
+  padding: 3px 10px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.pizzaButton:hover {
+  transition: all 0.3s ease-in;
+  background: #b23301;
+  transform: scale(0.9);
+}

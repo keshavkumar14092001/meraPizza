@@ -1,0 +1,147 @@
+@import "./variable.scss";
+
+body {
+    font-family: "Lato", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark_color;
+}
+
+body li {
+    list-style: none;
+}
+
+body a {
+    text-decoration: none;
+    color: $dark_color;
+}
+
+// Navbar Section:
+
+.navbar-dark .navbar-brand {
+    color: $light_color;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: $light_color;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $light_color;
+    font-size: 18px;
+    transition: $smooth;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: $hover_color;
+    transition: $smooth;
+}
+
+.coder {
+    color: $secondary_color;
+}
+
+.cartImg {
+    border-radius: 26px;
+}
+
+.fas {
+    color: $pure_color !important;
+    transition: $smooth;
+}
+
+.fas:hover {
+    color: $hover_color !important;
+    transition: $smooth;
+}
+
+// Home Section:
+
+.displayImg {
+    width: 500px;
+    height: 450px;
+}
+
+.displayContainer {
+    background: $background_color;
+    padding: 85px 0px;
+    width: 1297px;
+}
+
+.orderButton {
+    background: $hover_color;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0px;
+    border-radius: 20px;
+    color: $pure_color;
+    transition: $smooth;
+}
+
+.orderButton:hover {
+    transition: $smooth;
+    border: 2px solid black;
+    background: $secondary-hover;
+    transform: scale(0.9);
+}
+
+// Menu Section:
+
+.menuContainer {
+    background-color: $background_color;
+    padding: 15px 0px;
+    width: 1297px;
+}
+
+.menuPizzaImgContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.menuPizzaImg {
+    padding: 10px 5px;
+}
+
+.munuPizzaInfo {
+    width: 70%;
+}
+
+.pizzaSize {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: $background_color;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.pizzaPrice {
+    font-size: 18px;
+    font-weight: bolder;
+    background: $light_color;
+    padding: 1px 5px;
+}
+
+.pizzaButton {
+    border: none;
+    outline: none;
+    border: 2px solid $background_color;
+    border-radius: 15px;
+    background: $hover_color;
+    padding: 3px 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    color: $pure_color;
+}
+
+.pizzaButton:hover {
+    transition: $smooth;
+    background: $secondary-hover;
+    transform: scale(0.9);
+}
