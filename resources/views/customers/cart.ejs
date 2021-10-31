@@ -1,45 +1,57 @@
 <div class="container my-2 cartContainer">
-    <div class="container filledCartContainer">
-        <div class="mt-3 d-flex flex-row justify-content-center align-items-center fccInfo">
-            <img class="fccImg" src="/img/cart-black.png" alt="loading">
-            <h1 class="fccHeading">Order Summary</h1>
-        </div>
-        <div class="pizzaList">
-            <div class="d-flex flex-row justify-content-between align-items-center">
-                <img class="listImg" src="/img/pizza.png" alt="loading">
-                <div class="d-flex flex-column justify-content-between align-items-center">
-                    <h1 class="listHeading">Margherita</h1>
-                    <span class="listSize">medium</span>
-                </div>
-                <span class="listQuantity">1 Pcs</span>
-                <span class="listPrice">$4</span>
+    <% if(session.cart) { %>
+        <div class="container filledCartContainer">
+            <div class="mt-3 d-flex flex-row justify-content-center align-items-center fccInfo">
+                <img class="fccImg" src="/img/cart-black.png" alt="loading">
+                <h1 class="fccHeading">Order Summary</h1>
             </div>
-        </div>
-        <div class="infoSummary my-3 pb-3 pe-3">
-            <div class="infoSummaryPrice">
-                <span class="priceText">Total Price: </span>
-                <span class="totalPrice">$4</span>
-            </div>
-            <div class="clientForm">
-                <form action="#" class="mt-4">
-                    <input type="text" class="w-50 p-2 phoneNumber" placeholder="Phone number!">
-                    <input type="text" class="w-50 p-2 mt-3 clientAddress" placeholder="Address!">
-                    <div>
-                        <button type="submit" class="finalOrderButton">Order Now!</button>
+            <div class="pizzaList">
+                <% for(let pizza of Object.values(session.cart.items)) { %>
+                    <div class="d-flex flex-row justify-content-between align-items-center indPizza">
+                        <img class="listImg" src="/img/<%= pizza.item.image %>" alt="loading">
+                        <div class="d-flex flex-column justify-content-between align-items-center">
+                            <h1 class="listHeading">
+                                <%= pizza.item.name %>
+                            </h1>
+                            <span class="listSize">
+                                <%= pizza.item.size %>
+                            </span>
+                        </div>
+                        <span class="listQuantity">
+                            <%= pizza.qty %> Pcs
+                        </span>
+                        <span class="listPrice">$<%= pizza.item.price * pizza.qty %></span>
                     </div>
-                </form>
+                    <% } %>
             </div>
-            <!-- <div>
+            <div class="infoSummary my-3 pb-3 pe-3">
+                <div class="infoSummaryPrice">
+                    <span class="priceText">Total Price: </span>
+                    <span class="totalPrice">$<%= session.cart.totalPrice %></span>
+                </div>
+                <div class="clientForm">
+                    <form action="#" class="mt-4">
+                        <input type="text" class="w-50 p-2 phoneNumber" placeholder="Phone number!">
+                        <input type="text" class="w-50 p-2 mt-3 clientAddress" placeholder="Address!">
+                        <div>
+                            <button type="submit" class="finalOrderButton">Order Now!</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div>
                 <a href="/login" class="userNotLoged">Login to continue!</a>
             </div> -->
+            </div>
         </div>
-    </div>
-    <!-- <div class="container d-flex flex-column justify-content-between align-items-center emptyCartContainer">
-        <h1 class="text-center cartHeading">Cart Empty 😅</h1>
-        <p class="text-center my-4 cartPara"><em>You probably have not ordered a pizza yet.
-                To order a pizza, go to the menu page and place your order there.</em>
-        </p>
-        <img class="my-4 cartImg" src="/img/empty-cart.png" alt="loading">
-        <a class="mb-4 cartButton" href="/menu">Order now!</a>
-    </div> -->
+        <% } else { %>
+
+            <div class="container d-flex flex-column justify-content-between align-items-center emptyCartContainer">
+                <h1 class="text-center cartHeading">Cart Empty 😅</h1>
+                <p class="text-center my-4 cartPara"><em>You probably have not ordered a pizza yet.
+                        To order a pizza, go to the menu page and place your order there.</em>
+                </p>
+                <img class="my-4 cartImg" src="/img/empty-cart.png" alt="loading">
+                <a class="mb-4 cartButton" href="/menu">Order now!</a>
+            </div>
+            <% } %>
 </div>

@@ -1,4 +1,6 @@
 @import "./variable.scss";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 
 body {
     font-family: "Lato", sans-serif;
@@ -13,6 +15,10 @@ body li {
 body a {
     text-decoration: none;
     color: $dark_color;
+}
+
+.colorHover {
+    color: $hover_color;
 }
 
 // Navbar Section:
@@ -95,6 +101,13 @@ body a {
     background-color: $background_color;
     padding: 15px 0px;
     width: 1297px;
+}
+
+.menu_card {
+    width: 30%;
+    display: inline-block;
+    margin: 0px 20px;
+    margin-bottom: 25px;
 }
 
 .menuPizzaImgContainer {
@@ -198,6 +211,12 @@ body a {
 
 // Filled Cart Section:
 
+.cartCounter {
+    color: $hover_color;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .fccInfo {
     border-bottom: 2px solid $pure_color;
 }
@@ -260,7 +279,7 @@ body a {
     color: $pure_color;
 }
 
-.pizzaList {
+.indPizza {
     border-bottom: 2px solid $pure_color;
 }
 
@@ -378,4 +397,27 @@ body a {
     color: $darkBlue_color;
     font-size: 15px;
     font-weight: bold;
+}
+
+// Noty:
+.noty_theme__mint.noty_type__success {
+    background-color: $hover_color !important;
+    border: 2px solid $darkBlue_color !important;
+    border-radius: 50px;
+    color: $pure_color !important;
+    font-weight: bold !important;
+    font-size: 25px !important;
+    letter-spacing: 1px !important;
+    padding-left: 8px !important;
+}
+
+.noty_theme__mint.noty_type__error {
+    background-color: $secondary-hover !important;
+    border: 2px solid $darkBlue_color !important;
+    border-radius: 50px !important;
+    color: $pure_color !important;
+    font-weight: bold !important;
+    font-size: 25px !important;
+    letter-spacing: 1px !important;
+    padding-left: 8px !important;
 }

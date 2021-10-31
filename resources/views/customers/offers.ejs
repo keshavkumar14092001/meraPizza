@@ -1,0 +1,31 @@
+<div class="container my-2 menuContainer">
+    <h1 class="text-center text-dark my-5"><em>Current Offers on Pizza's</em></h1>
+    <div class="container my-4">
+        <% pizzaOffers.forEach(function(pizza){ %>
+            <div class="card menu_card">
+                <div class=" d-flex flex-row justify-content-around align-items-center menuSecondary_card">
+                    <div class="col-auto d-none d-lg-block menuPizzaImgContainer">
+                        <img class="bd-placeholder-img menuPizzaImg" width="200" height="250"
+                            src="/img/<%= pizza.image %>" alt="loading">
+                    </div>
+                    <div class="col p-2 d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="mb-3 text-center text-danger">
+                            <%= pizza.name %>
+                        </h3>
+                        <span class="text-center mb-3 pizzaSize">
+                            <%= pizza.size %>
+                        </span>
+                        <div class="d-flex flex-row justify-content-between align-items-center munuPizzaInfo">
+                            <span class="pizzaPrice">$<%= pizza.price %></span>
+                            <button data-pizza="<%= JSON.stringify(pizza) %>"
+                                class="pizzaButton d-flex flex-row justify-content-around align-items-center">
+                                <span>+</span>
+                                <span>Add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+</div>

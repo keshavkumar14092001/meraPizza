@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "617d67e636d51956dec16dcb"
+  },
+  "name": "Pepperoni",
+  "image": "pizza.png",
+  "price": "3",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d68a036d51956dec16dcc"
+  },
+  "name": "Vegies pizza",
+  "image": "pizza.png",
+  "price": "1.8",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d68fd36d51956dec16dcd"
+  },
+  "name": "Paneer pizza",
+  "image": "pizza.png",
+  "price": "3.2",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d693a36d51956dec16dce"
+  },
+  "name": "Chicken Mushroom",
+  "image": "pizza.png",
+  "price": "4.5",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d69b036d51956dec16dcf"
+  },
+  "name": "Americana",
+  "image": "pizza.png",
+  "price": "2.7",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d69f936d51956dec16dd0"
+  },
+  "name": "Marinara",
+  "image": "pizza.png",
+  "price": "3.5",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d6a4436d51956dec16dd1"
+  },
+  "name": "Margherita",
+  "image": "pizza.png",
+  "price": "3",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d6a8836d51956dec16dd2"
+  },
+  "name": "Carbonara",
+  "image": "pizza.png",
+  "price": "3.4",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "617d6aea36d51956dec16dd3"
+  },
+  "name": "Chicken Mushroom",
+  "image": "pizza.png",
+  "price": "3",
+  "size": "medium"
+}]
