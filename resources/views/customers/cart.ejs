@@ -20,14 +20,14 @@
                         <span class="listQuantity">
                             <%= pizza.qty %> Pcs
                         </span>
-                        <span class="listPrice">$<%= pizza.item.price * pizza.qty %></span>
+                        <span class="listPrice">$<%= (pizza.item.price * pizza.qty).toFixed(2) %></span>
                     </div>
                     <% } %>
             </div>
             <div class="infoSummary my-3 pb-3 pe-3">
                 <div class="infoSummaryPrice">
                     <span class="priceText">Total Price: </span>
-                    <span class="totalPrice">$<%= session.cart.totalPrice %></span>
+                    <span class="totalPrice">$<%= session.cart.totalPrice.toFixed(2) %></span>
                 </div>
                 <div class="clientForm">
                     <form action="#" class="mt-4">
