@@ -10,6 +10,7 @@ const DB_URL = 'mongodb+srv://Kumar123:140920@cluster0.mrixd.mongodb.net/pizzaMe
 const session = require('express-session');
 const flash = require('express-flash');
 const MongoDbStore = require('connect-mongo');
+const passport = require('passport');
 
 // Connecting to the DataBase:
 mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -30,18 +31,26 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 } // 24 Hours
 }));
 
+// Passport Config:
+const passportInit = require('./app(Complete Backhand Logic)/config/passport');
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Express Flash Config:
 app.use(flash());
 
 // Declaring Public/STatic Folder:
 app.use(express.static('public'));
 
-// Enabling express reading json ability:
+// Enabling express ability for reading json and other type of Data:
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Global Middleware:
 app.use((req, res, next) => {
     res.locals.session = req.session
+    res.locals.user = req.user
     next()
 });
 

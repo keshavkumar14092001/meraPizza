@@ -681,3 +681,10 @@ body a {
   letter-spacing: 1px !important;
   padding-left: 8px !important;
 }
+
+.errMessage {
+  color: #df2923;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 0px;
+}

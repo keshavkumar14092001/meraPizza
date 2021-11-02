@@ -1,21 +1,29 @@
 <div class="container loginContainer">
-    <form class="loginForm">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label loginText">Email address</label>
-            <input type="email" class="form-control loginInput" placeholder="Enter your email address!" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text loginSubText">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label loginText">Password</label>
-            <input type="password" class="form-control loginInput" placeholder="Enter your password!" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Submit</button>
-        <div>
-            <a href="/register" class="notAccount">Don't have an account?</a>
-        </div>
+    <form class="loginForm" method="post" action="/login">
+        <% if(messages.error) { %>
+            <span class="errMessage">
+                <%= messages.error %>
+            </span>
+            <% } %>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label loginText">Email address</label>
+                    <input type="email" name="email" class="form-control loginInput"
+                        placeholder="Enter your email address!" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text loginSubText">We'll never share your email with anyone else.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label loginText">Password</label>
+                    <input type="password" name="password" class="form-control loginInput"
+                        placeholder="Enter your password!" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                <div>
+                    <a href="/register" class="notAccount">Don't have an account?</a>
+                </div>
     </form>
 </div>
