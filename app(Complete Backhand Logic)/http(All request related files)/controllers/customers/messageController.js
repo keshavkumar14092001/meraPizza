@@ -21,13 +21,8 @@ function messageController() {
             })
             // Saving the user's message to the dataBase:
             user.save().then((user) => {
+                req.flash('success', 'Message sent successfully!!!');
                 return res.render('customers/contact');
-                new Noty({
-                    type: 'success',
-                    timeout: 1000,
-                    text: "Item Successfully Added To Cart",
-                    progressBar: false
-                }).show();
             }).catch((err) => {
                 req.flash('error', 'Something went wrong!!!');
                 return res.render('customers/contact');

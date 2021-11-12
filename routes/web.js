@@ -3,8 +3,12 @@ const cartController = require('../app(Complete Backhand Logic)/http(All request
 const authController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/authController');
 const menuController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/customers/menuController');
 const offerController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/customers/offerController');
-const guestController = require('../app(Complete Backhand Logic)/http(All request related files)/middlewares/guest');
+const guestMiddleware = require('../app(Complete Backhand Logic)/http(All request related files)/middlewares/guest');
+const authMiddleware = require('../app(Complete Backhand Logic)/http(All request related files)/middlewares/auth');
 const messageController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/customers/messageController');
+const orderController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/customers/orderController');
+const adminOrderController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/admin/adminOrderController');
+const adminCheck = require('../app(Complete Backhand Logic)/http(All request related files)/middlewares/admin');
 
 function initRoutes(app) {
 
@@ -16,11 +20,11 @@ function initRoutes(app) {
 
     app.get('/menu', menuController().index);
 
-    app.get('/register', guestController, authController().register);
+    app.get('/register', guestMiddleware, authController().register);
 
     app.post('/register', authController().postRegister);
 
-    app.get('/login', guestController, authController().login);
+    app.get('/login', guestMiddleware, authController().login);
 
     app.post('/login', authController().postLogin);
 
@@ -28,9 +32,19 @@ function initRoutes(app) {
 
     app.post('/logout', authController().logout);
 
-    app.get('/contact', messageController().contact);
+    app.get('/contact', authMiddleware, messageController().contact);
 
     app.post('/contact', messageController().postContact);
+
+    // Customers Routes:
+
+    app.post('/orders', authMiddleware, orderController().orderStore);
+
+    app.get('/customer/orders', authMiddleware, orderController().orderSummary);
+
+    // Admin Routes:
+
+    app.get('/admin/orders', adminCheck, adminOrderController().orderSummary);
 
 }
 

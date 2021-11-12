@@ -688,3 +688,23 @@ body a {
   font-weight: bold;
   padding: 5px 0px;
 }
+
+.successMessage {
+  color: #5cb85c;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 0px;
+}
+
+.orderText {
+  font-weight: bold;
+  color: #fe5f1e;
+}
+
+.idText {
+  color: #fe5f1e;
+}
+
+.idText:hover {
+  color: #b23301;
+}

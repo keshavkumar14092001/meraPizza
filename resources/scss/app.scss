@@ -423,9 +423,33 @@ body a {
 }
 
 // Error Message:
-.errMessage{
+
+.errMessage {
     color: $error_color;
     font-size: 20px;
     font-weight: bold;
     padding: 5px 0px;
+}
+
+.successMessage {
+    color: $sucess_color;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+// Order Text:
+
+.orderText {
+    font-weight: bold;
+    color: $hover_color;
+}
+
+// Id Text:
+.idText {
+    color: $hover_color;
+}
+
+.idText:hover {
+    color: $secondary-hover;
 }
