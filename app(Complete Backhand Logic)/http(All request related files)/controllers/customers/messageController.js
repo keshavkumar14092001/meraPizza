@@ -11,7 +11,7 @@ function messageController() {
             // Validating Reguest:
             if (!name || !email || !message) {
                 req.flash('error', 'All fields are required!!!');
-                return res.render('auth/register');
+                return res.redirect('/contact');
             }
             // Creating a message:
             const user = new Message({
@@ -22,10 +22,10 @@ function messageController() {
             // Saving the user's message to the dataBase:
             user.save().then((user) => {
                 req.flash('success', 'Message sent successfully!!!');
-                return res.render('customers/contact');
+                return res.redirect('/');
             }).catch((err) => {
                 req.flash('error', 'Something went wrong!!!');
-                return res.render('customers/contact');
+                return res.redirect('/contact');
             });
         }
     }

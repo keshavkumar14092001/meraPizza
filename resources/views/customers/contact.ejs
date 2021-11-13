@@ -1,9 +1,9 @@
 <div class="container loginContainer">
     <form class="loginForm" method="post" action="/contact">
         <% if(messages.error) { %>
-            <span class="errMessage">
+            <div id="errMessage" class="alert alert-danger" role="alert">
                 <%= messages.error %>
-            </span>
+            </div>
             <% } %>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label loginText">User name:</label>

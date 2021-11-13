@@ -1,3 +1,10 @@
+<div class="container">
+    <% if(messages.success) { %>
+        <div id="success-message" class="alert alert-info" role="alert">
+            <%= messages.success %>
+        </div>
+    <% } %>
+</div>
 <div class="container d-flex align-items-center my-2 displayContainer">
     <div class="w-50 d-flex flex-column justify-content-center align-items-center">
         <h3><em>Are you hungry?</em></h3>

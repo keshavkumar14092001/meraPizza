@@ -1,0 +1,50 @@
+<div class="container orderContainer my-4">
+    <h1 class="text-center orderText my-4"><em>Messages For Admin</em></h1>
+    <table class="table table-dark table-striped">
+        <div class="container">
+            <thead>
+                <tr>
+                    <th class="border">Username</th>
+                    <th class="border">Email</th>
+                    <th class="border">Message</th>
+                    <th class="border">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(messages.length) { %>
+                    <% messages.forEach((message)=> { %>
+                        <tr>
+                            <td class="border">
+                                <%= message.name %>
+                            </td>
+                            <td class="border">
+                                <%= message.email %>
+                            </td>
+                            <td class="border">
+                                <%= message.message %>
+                            </td>
+                            <td class="border">
+                                <%= moment(message.createdAt).format('hh:mm A') %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                            <% } else { %>
+                                <tr>
+                                    <td class="border">
+                                        No message found!!!
+                                    </td>
+                                    <td class="border">
+                                        No message found!!!
+                                    </td>
+                                    <td class="border">
+                                        No message found!!!
+                                    </td>
+                                    <td class="border">
+                                        No message found!!!
+                                    </td>
+                                </tr>
+                                <% } %>
+            </tbody>
+        </div>
+    </table>
+</div>
