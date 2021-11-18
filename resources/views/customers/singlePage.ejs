@@ -1,0 +1,48 @@
+<div class="container my-2 status">
+    <div class="upperPart">
+        <div class="heading d-flex flex-row justify-content-between align-items-center p-4">
+            <h1 class="statusHeading">Tracking Delievery Status</h1>
+            <h5 class="statusId"> <span class="subId">Order ID:</span>
+                <%= show._id %>
+            </h5>
+        </div>
+
+        <input id="hiddenInput" type="hidden" value="<%= JSON.stringify(show) %>">
+
+        <!-- iconCompleted -->
+        <!-- currentIcon -->
+        <!-- workCompleted -->
+        <!-- currentlyWorking -->
+        <!-- completed -->
+        <!-- currentlyWorking -->
+        <div class="lowerPart">
+            <ul>
+                <li class="statusLine">
+                    <i class="fas fa-clipboard-check fontawesomeIcons cardBoard"></i>
+                    <span>Order Placed</span>
+                    <p class="statusText" data-status="order_Placed"></p>
+                </li>
+                <li class="statusLine">
+                    <i class="fas fa-check-double fontawesomeIcons doubleCheck"></i>
+                    <span>Order Confirmation</span>
+                    <p class="statusText" data-status="confirmed"></p>
+                </li>
+                <li class="statusLine">
+                    <i class="fas fa-pizza-slice fontawesomeIcons completion"></i>
+                    <span>Preparation</span>
+                    <p class="statusText" data-status="prepared"></p>
+                </li>
+                <li class="statusLine">
+                    <i class="fas fa-truck fontawesomeIcons truck"></i>
+                    <span>Out For Delievery</span>
+                    <p class="statusText" data-status="delivered"></p>
+                </li>
+                <li class="statusLine pb-0">
+                    <i class="fas fa-smile-beam fontawesomeIcons"></i>
+                    <span>Order Completed</span>
+                    <p class="statusText" data-status="completed"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

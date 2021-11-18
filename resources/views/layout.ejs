@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>meraPizza || Best Pizza Makers</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -35,35 +34,35 @@
                         </li>
 
                         <% if(user) { %>
-                            <% if(user.role === 'admin') { %>
+                            <% if(user.role==='admin' ) { %>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/orders">Admin Table</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/messages">Messages</a>
                                 </li>
-                            <% } else { %>
+                                <% } else { %>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/customer/orders">My Orders</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/contact">Contact Us</a>
                                     </li>
-                            <% } %>
-                            <li class="nav-item">
-                                <form id="logout" action="/logout" method="post">
-                                    <a class="nav-link" onclick="document.getElementById('logout').submit()"
-                                        href="#">Logout</a>
-                                </form>
-                            </li>
-                            <% } else { %>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/register">Register</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/login">Login</a>
-                                </li>
-                                <% } %>
+                                    <% } %>
+                                        <li class="nav-item">
+                                            <form id="logout" action="/logout" method="post">
+                                                <a class="nav-link" onclick="document.getElementById('logout').submit()"
+                                                    href="#">Logout</a>
+                                            </form>
+                                        </li>
+                                        <% } else { %>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/register">Register</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/login">Login</a>
+                                            </li>
+                                            <% } %>
                     </ul>
                     <ul class="form-inline my-2 my-lg-0">
                         <li class="d-flex flex-column justify-content-center align-items-center">
@@ -93,38 +92,38 @@
                             <a class="nav-link" href="/offers">Offers</a>
                     </li>
                     <% if(user) { %>
-                        <% if(user.role === 'admin') { %>
+                        <% if(user.role==='admin' ) { %>
                             <li class="nav-item">
                                 <a class="nav-link" href="/admin/orders">Admin Table</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/admin/messages">Messages</a>
                             </li>
-                        <% } else { %>
+                            <% } else { %>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/customer/orders">My Orders</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/contact">Contact Us</a>
                                 </li>
-                        <% } %>
-                        <li class="nav-item">
-                            <form id="logout" action="/logout" method="post">
-                                <a class="nav-link" onclick="document.getElementById('logout').submit()"
-                                    href="#">Logout</a>
-                            </form>
-                        </li>
-                        <% } else { %>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/register">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/login">Login</a>
-                            </li>
-                            <% } %>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/cart">Cart</a>
-                                </li>
+                                <% } %>
+                                    <li class="nav-item">
+                                        <form id="logout" action="/logout" method="post">
+                                            <a class="nav-link" onclick="document.getElementById('logout').submit()"
+                                                href="#">Logout</a>
+                                        </form>
+                                    </li>
+                                    <% } else { %>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/register">Register</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/login">Login</a>
+                                        </li>
+                                        <% } %>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/cart">Cart</a>
+                                            </li>
                 </ul>
                 <p class="text-center text-primary">© 2021 meraPizza || Private LTD. </p>
                 <p class="text-center text-primary">All Rights Reserved </p>

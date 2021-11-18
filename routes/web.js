@@ -8,6 +8,7 @@ const authMiddleware = require('../app(Complete Backhand Logic)/http(All request
 const messageController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/customers/messageController');
 const orderController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/customers/orderController');
 const adminOrderController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/admin/adminOrderController');
+const statusController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/admin/statusController');
 const adminMessageController = require('../app(Complete Backhand Logic)/http(All request related files)/controllers/admin/adminMessageController');
 const adminCheck = require('../app(Complete Backhand Logic)/http(All request related files)/middlewares/admin');
 
@@ -43,11 +44,15 @@ function initRoutes(app) {
 
     app.get('/customer/orders', authMiddleware, orderController().orderSummary);
 
+    app.get('/customer/orders/:id', authMiddleware, orderController().showStatus);
+
     // Admin Routes:
 
     app.get('/admin/orders', adminCheck, adminOrderController().orderSummary);
 
     app.get('/admin/messages', adminCheck, adminMessageController().messageSummary);
+
+    app.post('/admin/order/status', adminCheck, statusController().status);
 
 }
 

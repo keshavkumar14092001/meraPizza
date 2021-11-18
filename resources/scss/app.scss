@@ -399,6 +399,130 @@ body a {
     font-weight: bold;
 }
 
+// Single Page Section:
+
+.status {
+    background: $background_color;
+    width: 1297px;
+    height: 680px;
+}
+
+.statusHeading {
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+    color: $hover_color;
+    background: $pure_color;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 2px solid $dark_color;
+}
+
+.statusId {
+    background: $pure_color;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 2px solid $dark_color;
+    font-weight: bold;
+    font-size: 20px;
+    color: $secondary-hover;
+}
+
+.subId {
+    color: $hover_color;
+}
+
+.status .lowerPart {
+    padding: 10px 20px;
+}
+
+.statusLine {
+    padding-bottom: 70px;
+}
+
+.statusLine span {
+    font-size: 25px;
+    font-weight: bold;
+    color: $secondary-hover;
+    position: relative;
+    margin-left: 60px;
+}
+
+.statusLine span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    background: $dark_color;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 1px 10px $background_color;
+}
+
+.statusText {
+    display: inline-block;
+    padding: 0px 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: $hover_color;
+}
+
+.completed{
+    color: $completed_color;
+}
+
+.currentlyWorking{
+    color: $currently_color;
+}
+
+// Icons:
+
+.fontawesomeIcons {
+    color: $dark_color !important;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.cardBoard {
+    font-size: 51px;
+}
+
+.doubleCheck {
+    font-size: 38px;
+}
+
+.completion {
+    font-size: 38px;
+}
+
+.truck {
+    font-size: 30px;
+}
+
+// Line:
+
+.status .lowerPart ul li {
+    position: relative;
+}
+
+.status .lowerPart ul li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    width: 2px;
+    height: 100%;
+    background: $dark_color;
+    margin-top: 10px;
+}
+
+.status .lowerPart ul li:nth-child(5) span::after {
+    box-shadow: 0 15px 1px 17px $background_color;
+}
+
 // Noty:
 .noty_theme__mint.noty_type__success {
     background-color: $hover_color !important;

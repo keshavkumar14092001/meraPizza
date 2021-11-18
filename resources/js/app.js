@@ -50,3 +50,77 @@ if (errMsg) {
 
 // Calling admin Function:
 initAdmin();
+
+// Changing Order Status:
+let statusText = document.querySelectorAll('.statusText');
+let Order = document.querySelector('#hiddenInput');
+let order = Order ? Order.value : null;
+let i = 0;
+let j;
+
+order = JSON.parse(order);
+
+function updateStatus(order) {
+    for (i = 0; i < statusText.length; i++) {
+        if (i === 0) {
+            if (statusText[i].dataset.status === order.status) {
+                statusText[i].innerHTML = '( Completed )';
+                statusText[i].classList.add('completed');
+                statusText[i + 1].innerHTML = '( inProgress )';
+                statusText[i + 1].classList.add('currentlyWorking');
+            }
+        }
+        if (i === 1) {
+            if (statusText[i].dataset.status === order.status) {
+                statusText[i - 1].innerHTML = '( Completed )';
+                statusText[i - 1].classList.add('completed');
+                statusText[i].innerHTML = '( Completed )';
+                statusText[i].classList.add('completed');
+                statusText[i + 1].innerHTML = '( inProgress )';
+                statusText[i + 1].classList.add('currentlyWorking');
+            }
+        }
+        if (i === 2) {
+            if (statusText[i].dataset.status === order.status) {
+                statusText[i - 2].innerHTML = '( Completed )';
+                statusText[i - 2].classList.add('completed');
+                statusText[i - 1].innerHTML = '( Completed )';
+                statusText[i - 1].classList.add('completed');
+                statusText[i].innerHTML = '( Completed )';
+                statusText[i].classList.add('completed');
+                statusText[i + 1].innerHTML = '( inProgress )';
+                statusText[i + 1].classList.add('currentlyWorking');
+            }
+        }
+        if (i === 3) {
+            if (statusText[i].dataset.status === order.status) {
+                statusText[i - 3].innerHTML = '( Completed )';
+                statusText[i - 3].classList.add('completed');
+                statusText[i - 2].innerHTML = '( Completed )';
+                statusText[i - 2].classList.add('completed');
+                statusText[i - 1].innerHTML = '( Completed )';
+                statusText[i - 1].classList.add('completed');
+                statusText[i].innerHTML = '( Completed )';
+                statusText[i].classList.add('completed');
+                statusText[i + 1].innerHTML = '( inProgress )';
+                statusText[i + 1].classList.add('currentlyWorking');
+            }
+        }
+        if (i === 4) {
+            if (statusText[i].dataset.status === order.status) {
+                statusText[i - 4].innerHTML = '( Completed )';
+                statusText[i - 4].classList.add('completed');
+                statusText[i - 3].innerHTML = '( Completed )';
+                statusText[i - 3].classList.add('completed');
+                statusText[i - 2].innerHTML = '( Completed )';
+                statusText[i - 2].classList.add('completed');
+                statusText[i - 1].innerHTML = '( Completed )';
+                statusText[i - 1].classList.add('completed');
+                statusText[i].innerHTML = '( Completed )';
+                statusText[i].classList.add('completed');
+            }
+        }
+    }
+}
+
+updateStatus(order);
