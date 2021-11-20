@@ -4,51 +4,53 @@
         <div id="success-message" class="alert alert-info" role="alert">
             <%= messages.success %>
         </div>
-    <% } %>
-    <table class="table table-dark table-striped">
-        <div class="container">
-            <thead>
-                <tr>
-                    <th class="border">Order</th>
-                    <th class="border">Address</th>
-                    <th class="border">Contact</th>
-                    <th class="border">Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% if(orders.length) { %>
-                    <% orders.forEach((order)=> { %>
-                        <tr>
-                            <td class="border">
-                                <a href="/customer/orders/<%= order._id %>" class="idText">
-                                    <%= order._id %>
-                                </a>
-                            </td>
-                            <td class="border">
-                                <%= order.address %>
-                            </td>
-                            <td class="border">
-                                <%= order.phoneNumber %>
-                            </td>
-                            <td class="border">
-                                <%= moment(order.createdAt).format('hh:mm A') %>
-                            </td>
-                        </tr>
-                        <% }) %>
-                <% } else { %>
-                        <tr>
-                            <td class="border">
-                                <a href="/" class="idText">No orders found!!!</a>
-                            </td>
-                            <td class="border">
-                                No orders found!!
-                            </td>
-                            <td class="border">
-                                No orders found!
-                            </td>
-                        </tr>
-                <% } %>
-            </tbody>
-        </div>
-    </table>
+        <% } %>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped">
+                    <div class="container">
+                        <thead>
+                            <tr>
+                                <th class="border">Order</th>
+                                <th class="border">Address</th>
+                                <th class="border">Contact</th>
+                                <th class="border">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(orders.length) { %>
+                                <% orders.forEach((order)=> { %>
+                                    <tr>
+                                        <td class="border">
+                                            <a href="/customer/orders/<%= order._id %>" class="idText">
+                                                <%= order._id %>
+                                            </a>
+                                        </td>
+                                        <td class="border">
+                                            <%= order.address %>
+                                        </td>
+                                        <td class="border">
+                                            <%= order.phoneNumber %>
+                                        </td>
+                                        <td class="border">
+                                            <%= moment(order.createdAt).format('hh:mm A') %>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                        <% } else { %>
+                                            <tr>
+                                                <td class="border">
+                                                    <a href="/" class="idText">No orders found!!!</a>
+                                                </td>
+                                                <td class="border">
+                                                    No orders found!!
+                                                </td>
+                                                <td class="border">
+                                                    No orders found!
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                        </tbody>
+                    </div>
+                </table>
+            </div>
 </div>

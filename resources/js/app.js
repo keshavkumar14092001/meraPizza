@@ -49,7 +49,11 @@ if (errMsg) {
 }
 
 // Calling admin Function:
-initAdmin();
+let adminAreaPath = window.location.pathname;
+if (adminAreaPath.includes('admin')) {
+    initAdmin();
+}
+
 
 // Changing Order Status:
 let statusText = document.querySelectorAll('.statusText');

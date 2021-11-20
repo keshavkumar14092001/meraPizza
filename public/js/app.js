@@ -2247,7 +2247,12 @@ if (errMsg) {
 } // Calling admin Function:
 
 
-initAdmin(); // Changing Order Status:
+var adminAreaPath = window.location.pathname;
+
+if (adminAreaPath.includes('admin')) {
+  initAdmin();
+} // Changing Order Status:
+
 
 var statusText = document.querySelectorAll('.statusText');
 var Order = document.querySelector('#hiddenInput');
