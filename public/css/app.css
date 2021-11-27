@@ -843,6 +843,48 @@ body a {
   color: #b23301;
 }
 
+@media (max-width: 1400px) {
+  .displayContainer {
+    width: 1115px;
+  }
+
+  .menuContainer {
+    width: 1115px;
+  }
+
+  .loginContainer {
+    width: 1115px;
+  }
+
+  .cartContainer {
+    width: 1115px;
+  }
+
+  .status {
+    width: 1115px;
+  }
+}
+@media (max-width: 1200px) {
+  .displayContainer {
+    width: 940px;
+  }
+
+  .menuContainer {
+    width: 940px;
+  }
+
+  .loginContainer {
+    width: 940px;
+  }
+
+  .cartContainer {
+    width: 940px;
+  }
+
+  .status {
+    width: 940px;
+  }
+}
 @media (max-width: 1100px) {
   .navbar-dark .navbar-brand {
     color: #f4f4f4;
@@ -1101,6 +1143,11 @@ body a {
   .statusText {
     padding: 0px 10px;
     font-size: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .displayContainer {
+    width: 699px;
   }
 }
 @media (max-width: 770px) {
@@ -1420,7 +1467,7 @@ body a {
   }
 
   .menuPizzaImg {
-    padding: 50px 35px;
+    padding: 40px 25px;
   }
 
   .munuPizzaInfo {
